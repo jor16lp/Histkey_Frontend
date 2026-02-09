@@ -1,0 +1,483 @@
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  text-align: center;
+  background-color: #3b414d;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+
+  .App-header {
+    background-color: #3b414d;
+    color: #3b414d;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+
+    div {
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+
+      .App-logo {
+        height: 8rem;
+        animation: App-logo-spin infinite 60s linear;
+      }
+
+      h1 {
+        font-size: 3.3rem;
+        font-weight: normal; // normal o bold ???
+      }
+    }
+
+    .header-right {
+      background-color: #3b414d;
+      margin-left: 5rem;
+    }
+  }
+
+  .App-main {
+    display: grid;
+    grid-template: 1fr / 90%;
+    justify-content: center;
+    font-size: calc(1rem + 2vmin);
+
+    .register-form {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .form-label {
+        display: grid;
+        grid-template-columns: 50% 50%;
+      }
+
+      .log-radio {
+        margin-left: 2rem;
+      }
+
+      .log-text {
+        margin-right: 20rem;
+      }
+
+      .check-login {
+        background-color: #3b414d;
+        border: solid 0.2rem white;
+        color: white;
+        font-size: 1.7rem;
+        padding: 0.6rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-family: 'Courier New', Courier, monospace;
+        max-width: 30rem;
+        min-height: 4rem;
+        align-self: center;
+      }
+
+      .check-login:hover {
+        background-color: white;
+        border: solid 0.2rem white;
+        color: #3b414d;
+        cursor: pointer;
+      }
+
+      .signup-success {
+        display: none;
+      }
+
+      .login-success {
+        display: none;
+      }
+
+      .log-link {
+        display: none;
+        background-color: #3b414d;
+        border: solid 0.2rem white;
+        color: white;
+        font-size: 2rem;
+        padding: 0.6rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-family: 'Courier New', Courier, monospace;
+        max-width: 20rem;
+        align-self: center;
+      }
+
+      .log-link:hover {
+        background-color: white;
+        color: #3b414d;
+        cursor: pointer;
+      }
+
+      .sign-radio {
+        margin-left: 2rem;
+      }
+
+      .sign-text {
+        margin-right: 20rem;
+      }
+    }
+
+    .login-button {
+      background-color: white;
+      border: solid 0.2rem white;
+      color: #3b414d;
+      width: 10rem;
+      padding: 0.6rem;
+      margin: 0.6rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .register-button {
+      background-color: #3b414d;
+      border: solid 0.2rem white;
+      color: white;
+      width: 10rem;
+      padding: 0.6rem;
+      margin: 0.6rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .login-button:hover {
+      background-color: rgb(214, 214, 214);
+      color: #3b414d;
+      cursor: pointer;
+    }
+
+    .register-button:hover {
+      background-color: #4f5666;
+      color: white;
+      cursor: pointer;
+    }
+
+    .logout-link {
+      background-color: #3b414d;
+      border: solid 0.2rem white;
+      color: white;
+      font-size: 1.3rem;
+      margin-right: 4rem;
+      padding: 0.6rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-family: 'Courier New', Courier, monospace;
+      max-width: 30rem;
+      align-self: last baseline;
+    }
+
+    .logout-link:hover {
+      background-color: white;
+      color: #3b414d;
+      cursor: pointer;
+    }
+
+    .examsIdSide {
+      display: flex;
+      flex-direction: column;
+
+      .exam-id-txt {
+        height: 1.6rem;
+        margin-right: 0.5rem;
+        margin-top: 0.5rem;
+      }
+    }
+
+    .examSide {
+      display: flex;
+      flex-direction: column;
+
+      .back-exam-link {
+        background-color: #3b414d;
+        border: solid 0.2rem white;
+        color: white;
+        padding: 0.6rem;
+        margin: 0.6rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-family: 'Courier New', Courier, monospace;
+        align-self: center;
+      }
+
+      .back-exam-link:hover {
+        background-color: white;
+        color: #3b414d;
+        cursor: pointer;
+      }
+
+      .fin-exam-link {
+        background-color: #3b414d;
+        border: solid 0.2rem white;
+        color: white;
+        padding: 0.6rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-family: 'Courier New', Courier, monospace;
+        align-self: center;
+        display: none;
+      }
+
+      .fin-exam-link:hover {
+        background-color: white;
+        color: #3b414d;
+        cursor: pointer;
+      }
+    }
+
+    .textSide {
+      grid-column: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+
+      .fileSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .textArea {
+        width: 70rem;
+        height: 22rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .text-links-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .demo-link {
+        background-color: #3b414d;
+        border: solid 0.2rem white;
+        color: white;
+        padding: 0.6rem;
+        margin: 0.6rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-family: 'Courier New', Courier, monospace;
+        align-self: center;
+        height: 2.8rem;
+      }
+  
+      .demo-link:hover {
+        background-color: white;
+        border: solid 0.2rem white;
+        color: #3b414d;
+        cursor: pointer;
+      }
+    }
+
+    .keywords {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+
+      .keywords-header {
+        display: flex;
+        justify-content: space-between;
+
+        .selection-keywords-container {
+          display: flex;
+          gap: 1.5rem;
+
+          .selection-keywords-button {
+            background-color: #3b414d;
+            border: solid 0.2rem white;
+            color: white;
+            padding: 0.6rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.3rem;
+            align-self: center;
+          }
+
+          .selection-keywords-button:hover {
+            background-color: white;
+            color: #3b414d;
+            cursor: pointer;
+          }
+        }
+
+      }
+
+      .keywords-container {
+        margin: -2rem 0 2rem;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+
+        .keyword-container {
+          display: grid;
+          grid-template: 1fr 1fr / 100%;
+          height: 5rem;
+          border: solid 0.2rem white;
+          border-radius: 0.5rem;
+          margin: 0.5rem;
+
+          .key-name-container {
+            grid-column: span 3;
+            background-color: white;
+            border-top-left-radius: 0.3rem;
+            border-top-right-radius: 0.3rem;
+            margin: 0.2rem;
+
+            .key-name {
+              font-size: 0.8rem;
+              text-align: center;
+              background-color: white;
+              color: #3b414d;
+              border: none;
+            }
+          }
+
+          .key-repetitions-container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            font-size: 0.5rem;
+
+            .key-repetitions {
+              position: relative;
+              top: -0.55rem;
+              font-size: 1rem;
+            }
+
+            .arrow {
+              background-color: #3b414d;
+              color: white;
+              border: none;
+              border-radius: 0.5rem;
+              height: 2rem;
+            }
+          }
+        }
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-evenly;
+
+        .add-container {
+          display: flex;
+
+          align-self: center;
+
+          .input-add-keyword {
+            margin: 1rem;
+            margin-right: 0.5rem;
+          }
+
+          .button-add-keyword {
+            background-color: #3b414d;
+            border: solid 0.2rem white;
+            color: white;
+            text-decoration: none;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.5rem;
+            border-radius: 0.5rem;
+            margin: 1rem;
+            margin-left: 0;
+            padding: 0.6rem;
+            min-width: 2.5rem;
+          }
+
+          .button-add-keyword:hover {
+            background-color: white;
+            color: #3b414d;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .questions {
+      display: flex;
+      flex-direction: column;
+
+      .question {
+        border: 0.2rem solid white;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin: 1rem;
+        display: grid;
+        grid-template: 1fr / 80% 20%;
+
+        .question-icons {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+
+          .icon-button {
+            border: none;
+            background-color: #3b414d;
+            padding: 0.5rem;
+          }
+
+          .icon-button:hover {
+            border: 0.2rem solid white;
+            border-radius: 0.5rem;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .saveORcontinue {
+        display: flex;
+        justify-content: space-evenly;
+
+        .download-questions-container {
+          display: flex;
+          justify-content: space-evenly;
+          gap: 1.5rem;
+
+          a {
+            background-color: #3b414d;
+            color: white;
+            // border: solid 0.2rem white;
+            text-decoration: none;
+            padding: 0.5rem;
+          }
+
+          a:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .link {
+      background-color: #3b414d;
+      border: solid 0.2rem white;
+      color: white;
+      padding: 0.6rem;
+      margin: 0.6rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-family: 'Courier New', Courier, monospace;
+      align-self: center;
+    }
+
+    .link:hover {
+      background-color: white;
+      color: #3b414d;
+      cursor: pointer;
+    }
+  }
+}
